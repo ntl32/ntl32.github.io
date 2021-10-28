@@ -1,437 +1,662 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ogani Template">
-    <meta name="keywords" content="Ogani, unica, creative, html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nông sản Việt</title>
+    <title>Du lich</title>
+<style>
+        :root {
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+            --navmenuheight: 35px;
+        }
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background: white;
+        }
+        body{
+            background:white;
+            margin: 0 auto;
+          }
+        #navbar{
+            width: 85%;
+            margin: 0 auto;
+	        height: var(--navmenuheight);
+            background:#1D9EAD;
+        }
+        #navbar .navbarmenu{
+            height: 100%;
+            margin-left:35px;
+            float:left;
+	        background-color:#1D9EAD;
+        }
+        #navbar .navbarmenu>ul{
+            list-style-type: none;
+            height: 100%;
+        }
+        #navbar .navbarmenu>ul>li{
+            float:left;
+            height: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size:0.7rem;
+            margin-left:30px;
+            position: relative;
+        }
+        #navbar .navbarmenu>ul>li>a{
+            font-size: 16px;
+	        display: block;
+	        padding: 10px 15px;
+	        text-decoration: none;
+	        color: #fff;
+        }
+        #navbar .navbarmenu>ul>li>ul{
+            list-style: none;
+	        position: absolute;
+	        top: 100%;
+	        left: 0;
+	        width: 200px;
+	        background-color:#1D9EAD;
+	        display: none;
+        }
+        #navbar .navbarmenu>ul>li>ul>li{
+	        top: 0;
+	        left: 100%;  
+        }
+        #navbar .navbarmenu>ul>li>ul>li>a{
+            text-decoration: none;
+	        color: #fff;
+            font-size: 14;
+        }
+        #navbar .navbarmenu>ul>li:hover>ul{
+            display: block;
+        }
+        #navbar .search{
+            float:left;
+            width:192px;
+            height:26px;
+            margin-top:5px;
+            background: #02e4fd;
+            margin-left:30px;
+            border-radius:13px;
+        }
+        #navbar .search input{
+            font-weight: bold;
+            background:none;
+            margin-left:7px;
+            margin-top:5px;
+            color:rgb(255, 255, 255);
+            border:none;
+            display: block;
+            float:left;
+            width: 85%;
+        }
+        #navbar .search input:focus{
+            outline: none;
+        }
+        #navbar .search span{
+            color:white;
+            font-size:1.1rem;
+            display:block;
+            float:left;
+            margin-top:4px;
+        }
+        #navbar .lang{
+            float:left;
+            margin-left:50px;
+            margin-top:6px;
+        }
+        #banner{
+            /* height: 450px; */
+            height: auto;
+            width: 100%;
+        }
+        #banner img {
+            height: 100%;
+            width:100%;
+            margin-top: 10px;
+            max-height: 300px;
+            object-fit: fill;
+        }
+        #newsfeed {
+            height: 35px;
+            margin: auto;
+            margin-top: 10px;
+            background: #FBF29E;
+        }
+        #newsfeed .km {
+            height: 100%;
+            width: 150px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 35px;
+            font-size: 16px;
+            text-align: center;
+            float: left;
+            background: #1D9EAD;
+        }
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
+        #newsfeed .arr {
+            width: 10px;
+            height: 10px;
+            border-top: 17.5px solid transparent;
+            border-bottom: 17.5px solid transparent;
+            border-left: 17.5px solid #1D9EAD;
+            background:  #FBF29E;
+            float: left;
+        }
 
-<body>
-    <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+        #newsfeed .km a {
+            color: white;
+            text-decoration: none; 
+        }
 
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
-        </div>
-        <div class="humberger__menu__cart">
-            <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-            </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
-        </div>
-        <div class="humberger__menu__widget">
-            <div class="header__top__right__language">
-                <img src="img/vietnam.jpg" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
-            <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
-            </div>
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Trang chủ</a></li>
-                <li><a href="#">Cửa hàng</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Liên hệ</a></li>
-            </ul>
-        </nav>
-        <div id="mobile-menu-wrap"></div>
-        <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div>
-        <div class="humberger__menu__contact">
-            <ul>
-                <li><i class="fa fa-envelope"></i> happy@ogani.com</li>
-                <li>Miễn phí vận chuyển</li>
-            </ul>
-        </div>
-    </div>
-    <!-- Humberger End -->
+        #newsfeed .running-text {
+        
+            height: 100%;   
+            background:  #FBF29E;
+            float: left;
+            overflow: hidden;
+        }
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left">
-                            <ul>
-                                <li><i class="fa fa-envelope"></i> happy@ogani.com</li>
-                                <li>Miễn phí vận chuyển</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                            </div>
-                            <div class="header__top__right__language">
-                                <img src="img/vietnam.img" alt="">
-                            </div>
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Đăng nhập</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu">
-                        <ul>
-                            <li ><a href="./index.html">Trang chủ</a></li>
-                            <li><a href="#">Cửa hàng</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Liên hệ</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__cart">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="humberger__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
+        #newsfeed .running-text>ul {
+            height: 100%;
+            list-style-type: none;
+            position: relative;
+            animation: runnings 100s;
+            animation-timing-function: linear;
+            white-space: nowrap;
+            line-height: 35px;
+        }
 
-    <!-- Hero Section Begin -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>Gian hàng</span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Hoa quả</a></li>
-                            <li><a href="#">Rau củ</a></li>
-                            <li><a href="#">Thực phẩm chế biến</a></li>
-                            <li><a href="#">Thực phẩm tươi sống</a></li>
-                            <li><a href="#">Đặc sản vùng miền</a></li>
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    Danh mục
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="Bạn muốm gì">
-                                <button type="submit" class="site-btn">Tìm kiếm</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>19006868</h5>
-                                <span>Hỗ trợ 24/7</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero__item set-bg" data-setbg="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqVoZKAIFwVwcwjZnhu-QI-HV7hzQWid_oZg&usqp=CAU">
-                        <div class="hero__text">
-                            
-                            <a href="#" class="primary-btn">SHOP NOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Hero Section End -->
+        #newsfeed .running-text>ul:hover {
+            animation-play-state: paused;
+        }
 
-    <!-- Categories Section Begin -->
+        @keyframes runnings {
+            0% {
+                left: 100%;
+            }
+
+            100% {
+                left: -1000px
+            }
+        }
+
+        #newsfeed .running-text>ul>li {
+            display: inline-block;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        #newsfeed .running-text>ul>li::before {
+            content: "✔";
+            color:red;
+        }
+
+        #newsfeed .running-text>ul>li>a {
+            color:red;
+            text-decoration: none;
+        }
+        #main-content{
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #main-content .text1{
+            margin-top: 20px;
+            height: 50px;
+            
+        }
+        #main-content .text1 p{
+            color: #16898d; 
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+        }
+        #main-content .product {
+            width: 100%;
+            /* padding-left: 60px; */
+        }
+        .product1{
+			width: 100%;
+			height: 570px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        
+		}
+        #main-content .product img{
+            width: 100%; 
+            height: 200px;
+        }
+        .col1{
+			/* width: 20%; */
+			border: 0.04px solid #616161;
+			background-color: #F5F7F8;
+			height: 550px;
+			float:left;
+			margin: 10px;
+		}
+        .text2 {
+            background-color: #1D9EAD;
+            text-align: center;
+        }
+        .text2 a{
+            text-decoration: none ; 
+            color: white ; 
+            font-weight: 400;
+        }
+        .col2{
+            margin-top: 10px;
+			margin-left: 10px;
+            height: 300px;
+			width: 250px;
+        }
+        .col3{
+			margin-bottom: 10px;
+			height: 100px;
+			width: 100%;
+        }
+        .col3 a{
+            color: #16898d; 
+            text-decoration: none; 
+            font-size: 20px;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .col4{
+			margin-bottom: 10px;
+			height: 30px;
+			width: 100%;
+        }
+        
+        .t1 {
+            float:left ; 
+            color: #333333; 
+            padding: 5px;
+        }
+        .t2{
+            float: right; 
+            color: #16898D; 
+            font-size: 20px; 
+            padding: 3px; 
+            font-weight: bold;
+        }
+        .col5{
+			margin-bottom: 1px;
+			height: 100px;
+			width: 100%;
+        }
+        .col5 p{
+            color: #000000; 
+            text-align: center;
+            font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+        }
+        .col5 a{
+            color: #16898d;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-family: Baskerville, 'Palatino Linotype', Palatino, 'Century Schoolbook L', 'Times New Roman', 'serif';
+        }
+        .col2 .button{
+            background-color: #1D9EAD;  
+			height: 30px; 
+			width: 100px; 
+			margin-top: 10px;
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        .col2 .button a{
+            color:white;
+			text-decoration: none;
+            color:white;
+			text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        #ads{
+            height: 100%;
+            margin-bottom: 100px;
+        }
+        #ads .title{
+            margin-top: 50px;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        
+        #ads .title p{
+            color: #16898d; 
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+        #ads .news{
+            width: 100%;
+            height: 300px;
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .new1{
+			/* width: 20%; */
+			border: 0.04px solid #616161;
+			background-color: #F5F7F8;
+			height: 100%;
+			float:left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .new1 img{
+            height: 200px;
+            width: 100%
+        }
+        .new1 .title1{
+            text-decoration: none;
+            color: #999999;
+            display: block;
+            text-align: center;
+        }
+        .new1 button{
+            background: #1D9EAD;  
+            height: 30px; 
+            width: 100px; 
+            margin-top: 10px;
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+        .new1 button a{
+            color:white;
+			text-decoration: none;
+            text-transform: uppercase;    
+        }
+        #footer{
+            padding-top: 70px;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+            margin-right: 50px;
+            background:#e5e6e5;
+        }
+        #footer .left{
+            height:100% ;
+            margin-left: 50px;
+            margin-right: 50px;
+            float: left;
+            position: relative;
+            padding: auto;
+        }
+    
+        #footer .left p{
+            line-height: 1.5;
+            font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; 
    
-    <!-- Categories Section End -->
+        }
+        #footer .center {
+            height:100% ;
+            float: left;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding: auto;
+        }
+        #footer .center h3 {
+            font-weight: 600; 
+            font-family:Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'
+        }
+        #footer .center ul{
+            padding-top: 20px; 
+            list-style: none;
+        }
+        #footer .center ul li {
+            text-decoration: none; 
+            padding-top: 10px; 
+        }
+        #footer .right{
+            height:100%;
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #footer .right p{
+            font-size: 1.17em;
+            font-weight: 500 ;
+            font-family:'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'; 
+            color: #177C88;
+        }
+        #footer .right .fa{
+            color: #1D9EAD;
+            padding: 20px;
+            font-size: 25px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+        }
 
-    <!-- Featured Section Begin -->
-    <section class="featured spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Sản phẩm</h2>
+
+</style>
+</head>
+<body>
+    <div id="navbar">
+        <div class="navbarmenu">
+            <ul>
+                <li> <a href="">HOME</a> </li>
+                <li> <a href="Gioithieu.html">GIỚI THIỆU</a> </li>
+                <li> <a href ="">TOUR TRONG NƯỚC</a>
+                  <ul>
+                    <li> <a href ="">DU LỊCH BẮC BỘ</a> </li>
+                    <li> <a href ="">DU LỊCH TRUNG BỘ</a> </li>
+                    <li> <a href="">DU LỊCH NAM BỘ</a> </li>
+                  </ul>
+                </li>
+                <li> <a href="">TOUR NƯỚC NGOÀI</a>
+                  <ul>
+                    <li> <a href = "">VISA QUỐC TẾ</a> </li>
+                    <li> <a href = "">KHÁCH SẠN</a> </li>
+                    <li> <a href = "">VẬN CHUYỂN</a> </li>
+                    <li> <a href = "">VÉ MÁY BAY</a> </li>
+                  </ul>
+                </li>
+                <li> <a href="">BLOG DU LỊCH</a> </li>
+              </ul>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Tìm kiếm...">
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+        <div class="lang">
+            <a href="">
+                <img src="English.png" alt="">
+            </a>
+        </div>
+    </div>
+    <div id="banner">
+        <div>
+            <img src="banner.jpg" alt="">
+        </div>
+    </div>
+    <div id="newsfeed">
+        <div class="km"> <a href="">
+               ƯU ĐÃI GIÁ SỐC</a></div>
+        <div class="arr"></div>
+        <div class="running-text">
+            <ul>
+                <li><a href="">Chào mừng đường bay nội địa</a></li>
+                <li><a href="">Combo Tiết kiệm đến 50%, 3N2Đ Phú Quốc</a></li>
+                <li><a href="">Tour Hà Nội- Yên Tử - Hạ Long - Tràng An - Fansipang</a></li>
+            <ul>
+        </div>
+    </div>
+    <div id="main-content">
+        <div class="text1">
+            <p>Tour du lịch</p>
+        </div>
+        <div class="product">
+            <div class="product1">
+                <div class="col1">
+                <img src="toursp2.jpg" alt="">
+                <p class="text2"><a href="">Khởi hành từ Hà Nội</a></p>
+                <div class="col2" >
+                    <div class="col3">
+                        <a href="">VOUCHER FLAMINGO ĐẠI LẢI - FOREST IN THE SKY VILLA</a>
                     </div>
-                    <div class="featured__controls">
-                        <ul>
-                            <li class="active" data-filter="*">Tất cả</li>
-                            <li data-filter=".oranges">Rau củ</li>
-                            <li data-filter=".fresh-meat">Thực phẩm tươi sống</li>
-                            <li data-filter=".vegetables">Thực phẩm chế biến</li>
-                        </ul>
+                    <hr>
+                    <div class="col4">
+                        <p class="t1">Giá 1 khách:</p>
+                        <p class="t2">1.500.000 đ</p>
+                    </div>
+                    <hr>
+                    <div class="col5">
+                        <p>Combo 2 ngày 1 đêm cho 2 người lớn và 1 trẻ em dưới 5 tuổi</p>
+                        <a href="">Xem thêm</a>
+                    </div>
+                    <hr>
+                    <button class="button"><a href="">ĐẶT NGAY</a></button>
+                    </div>
+                </div>
+                <div class="col1">
+                    <img src="toursp1.jpg" alt="">
+                    <p class="text2"><a href="">Khởi hành từ Hà Nội</a></p>
+                    <div class="col2" >
+                        <div class="col3">
+                            <a href="">Nam Ninh - Công Viên khủng long</a>
+                        </div>
+                        <hr>
+                        <div class="col4">
+                            <p class="t1">Giá 1 khách:</p>
+                            <p class="t2">3.990.000  đ</p>
+                        </div>
+                        <hr>
+                        <div class="col5">
+                            <p>Lịch khởi hành : 29/12, 30/12 ( 3 ngày / 2 đêm – Đi đường bộ, nhập cảnh bằng CMT )</p>
+                            <a href="">Xem thêm</a>
+                        </div>
+                        <hr>
+                        <button class="button"><a href="">ĐẶT NGAY</a></button>
+                        </div>
+                </div>
+                <div class="col1">
+                    <img src="toursp1.jpg" alt="">
+                    <p class="text2"><a href="">Khởi hành từ Hà Nội</a></p>
+                    <div class="col2" >
+                        <div class="col3">
+                            <a href="">SEOUL 5 NGÀY 4 ĐÊM</a>
+                        </div>
+                        <hr>
+                        <div class="col4">
+                            <p class="t1">Giá 1 khách:</p>
+                            <p class="t2">10.900.000 đ</p>
+                        </div>
+                        <hr>
+                        <div class="col5">
+                            <p>Seoul 05 ngày 04 đêm/ Hàng không VIETJET Khởi hành 04/12/2018</p>
+                            <a href="">Xem thêm</a>
+                        </div>
+                        <hr>
+                        <button class="button"><a href="">ĐẶT NGAY</a></button>
+                        </div>
+                </div>
+                <div class="col1">
+                    <img src="toursp1.jpg" alt="">
+                    <p class="text2"><a href="">Khởi hành từ Hà Nội</a></p>
+                    <div class="col2" >
+                        <div class="col3">
+                            <a href="">Seoul trượt tuyết</a>
+                        </div>
+                        <hr>
+                        <div class="col4">
+                            <p class="t1">Giá 1 khách:</p>
+                            <p class="t2">11.500.000 đ</p>
+                        </div>
+                        <hr>
+                        <div class="col5">
+                            <p>Dịch vụ 4 saoHàng không Vietjet Khởi hành 18/12</p>
+                            <a href="">Xem thêm</a>
+                        </div>
+                        <hr>
+                        <button class="button"><a href="">ĐẶT NGAY</a></button>
                     </div>
                 </div>
             </div>
-            <div class="row featured__filter">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Thịt bò</a></h6>
-                            <h5>250000/kg</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Chuối</a></h6>
-                            <h5>20000/kg</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Ổi</a></h6>
-                            <h5>20000/kg</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-                    <div class="featured__item">
-                        <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
-                            <ul class="featured__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="featured__item__text">
-                            <h6><a href="#">Dưa hấu</a></h6>
-                            <h5>20000/kg</h5>
-                        </div>
-                        < </section>
-                            <!-- Featured Section End -->
-
-                            <!-- Banner Begin -->
-                        
-                            <!-- Latest Product Section End -->
-
-                            <!-- Blog Section Begin -->
-                            <section class="Từ blog">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="section-title from-blog__title">
-                                                <h2>Từ blog</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <div class="blog__item">
-                                                <div class="blog__item__pic">
-                                                    <img src="data:image/jpeg;base64,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"
-                                                        alt="">
-                                                </div>
-                                                <div class="blog__item__text">
-                                                    <ul>
-                                                        <li><i class="fa fa-calendar-o"></i> Th05 4,2019</li>
-                                                        <li><i class="fa fa-comment-o"></i> 5</li>
-                                                    </ul>
-                                                    <h5><a href="#">Thịt trâu gác bếp</a></h5>
-                                                    <p>Mẹo mua đặc sản Thịt trâu gác bếp Tây Bắc ngon, không mốc, đúng
-                                                        giá </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <div class="blog__item">
-                                                <div class="blog__item__pic">
-                                                    <img src="https://tintucnamdinh.vn/wp-content/uploads/2016/01/1204.jpg"
-                                                        alt="">
-                                                </div>
-                                                <div class="blog__item__text">
-                                                    <ul>
-                                                        <li><i class="fa fa-calendar-o"></i> Th05 4,2019</li>
-                                                        <li><i class="fa fa-comment-o"></i> 5</li>
-                                                    </ul>
-                                                    <h5><a href="#">Chè kho Nam Định</a></h5>
-                                                    <p>Cùng với cá kho, bánh gai, cá gỏi, chè kho Nam Định là đặc sản
-                                                        dân dã mà đặc sắc của một vùng đất cổ giầu chất văn hóa. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-6">
-                                            <div class="blog__item">
-                                                <div class="blog__item__pic">
-                                                    <img src="data:image/jpeg;base64,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"
-                                                        alt="">
-                                                </div>
-                                                <div class="blog__item__text">
-                                                    <ul>
-                                                        <li><i class="fa fa-calendar-o"></i> Th05 4,2019</li>
-                                                        <li><i class="fa fa-comment-o"></i> 5</li>
-                                                    </ul>
-                                                    <h5><a href="#">Bánh mì Hải Phòng</a></h5>
-                                                    <p> Chiếc bánh mì cho nhỉnh hơn hai đốt ngón tay, dài chừng một
-                                                        gang, nhân "nghèo nàn" chỉ gồm duy nhất pate mà lại là món ăn
-                                                        khiến người đất cảng Hải Phòng nở mày nở mặt.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <!-- Blog Section End -->
-
-                            <!-- Footer Section Begin -->
-                            <footer class="footer spad">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="footer__about">
-                                                <div class="footer__about__logo">
-                                                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                                                </div>
-                                                <ul>
-                                                    <li>Địa chỉ: 207 Giải Phóng, Hà Nội</li>
-                                                    <li>Điện thoại: 19006868</li>
-                                                    <li>Email: happy@ogani.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                                            <div class="footer__widget">
-                                                <h6>Liên kết</h6>
-                                                <ul>
-                                                    <li><a href="#">Chúng tôi</a></li>
-                                                    <li><a href="#">Cửa hàng</a></li>
-                                                    <li><a href="#">An toàn mua sắm</a></li>
-                                                    <li><a href="#">Thông tin vận chuyển</a></li>
-                                                    <li><a href="#">Chính sách bảo mật</a></li>
-                                                    <li><a href="#">site map</a></li>
-                                                </ul>
-                                                <ul>
-                                                    <li><a href="#">Chúng tôi là ai</a></li>
-                                                    <li><a href="#">Dịch vụ</a></li>
-                                                    <li><a href="#">Dự án</a></li>
-                                                    <li><a href="#">Liên hệ</a></li>
-                                                    <li><a href="#">Đổi mới</a></li>
-                                                    <li><a href="#">Chứng thực</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12">
-                                            <div class="footer__widget">
-                                                <h6>Tham gia với chúng tôi</h6>
-                                                <p>Nhận thông tin cập nhật qua email về cửa hàng cà khuyến mại.</p>
-                                                <form action="#">
-                                                    <input type="text" placeholder="Nhập địa chỉ email">
-                                                    <button type="submit" class="site-btn">Đăng kí</button>
-                                                </form>
-                                                <div class="footer__widget__social">
-                                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                                </div>
-                                                <div class="footer__copyright__payment"><img src="img/payment-item.png"
-                                                        alt=""></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </footer>
-                            <!-- Footer Section End -->
-
-                            <!-- Js Plugins -->
-                            <script src="js/jquery-3.3.1.min.js"></script>
-                            <script src="js/bootstrap.min.js"></script>
-                            <script src="js/jquery.nice-select.min.js"></script>
-                            <script src="js/jquery-ui.min.js"></script>
-                            <script src="js/jquery.slicknav.js"></script>
-                            <script src="js/mixitup.min.js"></script>
-                            <script src="js/owl.carousel.min.js"></script>
-                            <script src="js/main.js"></script>
-
-
-
+        </div>
+    </div>
+    <div id="ads">
+        <div class="title">
+        <p>TIN TỨC DU LỊCH<p>
+        </div>
+        <div class="news">
+            <div class="new1">
+                <img src="tintuc1.jpg" alt="">
+                <a href="" class="title1">10 quy tắc trên bàn ăn của người Hàn</a>
+                <button><a href="">Xem thêm</a></button>
+            </div>
+            <div class="new1">
+                <img src="tintuc2.jpg" alt="">
+                <a href="" class="title1">Ẩm thực Hàn Quốc - Thứ tạo nên bản sắc</a>
+                <button><a href="">Xem thêm</a></button>
+            </div>
+            <div class="new1">
+                <img src="tintuc3.png" alt="">
+                <a href="" class="title1">Hướng dẫn xin VISA du lịch tự túc Hàn Quốc</a>
+                <button><a href="">Xem thêm</a></button>
+            </div>
+            <div class="new1">
+                <img src="tintuc4.jpg" alt="">
+                <a href="" class="title1">Thuê phòng du lịch ở Hàn Quốc</a>
+                <button><a href="">Xem thêm</a></button>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="left">
+            <p> <strong>Địa chỉ:</strong> Tầng 4, số 147 Mai Dịch, Cầu Giấy, Hà Nội<br> VPGD: P1802 – C2 D’Capitale Trần Duy Hưng, Hà Nội</p>
+            <p>Hotline:<strong>024 6259 8807</strong></p>
+            <p>Email:<strong>info@webtravel.vn</strong></p>
+        </div>
+        <div class="center">
+            <h3>VỀ  WEBTRAVEL - GIẢI PHÁP BÁN TOUR DỄ DÀNG</h3>
+            <p>Giới Thiệu</p>
+            <p>Liên Hệ</p>
+            <p>Điều Kiện và Điều Khoản</p>
+        </div>
+        <div class="right">
+            <p>Follow us</p>
+            <div class = "right-link">
+                <a href="https://www.facebook.com/ktqdNEU/"class="fa fa-facebook"></a>
+                <a href="https://www.youtube.com/channel/UCV24tBVKuhkSC1kd36FbvmA" class="fa fa-youtube"></a>
+                <a href="https://twitter.com/DaiHocKTQD" class="fa fa-twitter"></a>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
